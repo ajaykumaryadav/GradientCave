@@ -9,10 +9,10 @@
 		"newtab": "index.html"
 	},
 
-	"icons": { 
-		"16": "img/icons/icon16.png",
-		"48": "img/icons/icon48.png",
-		"128": "img/icons/icon128.png"
+	"icons": {
+		"16": "img/icon_v1/16.png",
+		"48": "img/icon_v1/48.png",
+		"128": "img/icon_v1/128.png"
 	},
 
 	"permissions": [

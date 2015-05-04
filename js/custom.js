@@ -25,13 +25,13 @@ reloadButton.addEventListener('click', function() { reloadClick() });
 function reloadClick() {
 
   reloadEnabled = false;
-  rotation -= 180;
-  
+  rotation -= 360;
+
   // Eh, this works.
   reloadSvg.style.webkitTransform = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
   reloadSvg.style.MozTransform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
   reloadSvg.style.transform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
-  
+
   currentPalette = currentPalette + 1;
   currentPalette = currentPalette % palettes.length;
   document.body.style.background = palettes[currentPalette];
