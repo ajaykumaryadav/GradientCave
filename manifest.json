@@ -1,0 +1,17 @@
+{
+	"name": "GradientCave",
+	"description": "GradientCave",
+	"version": "1.0.1",
+	"incognito": "split",
+	"author": "Ajay & Rahul",
+
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	
+	"permissions": [
+		"clipboardWrite"
+	],
+
+	"manifest_version": 2
+}
