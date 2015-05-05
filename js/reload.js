@@ -48,7 +48,7 @@ var gradientCave = (function(){
     reloadSvg.style.MozTransform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
     reloadSvg.style.transform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
 
-    gradientActive = (Math.floor(Math.random() * (gradient.length - 1)) + 1);
+    gradientActive = (Math.floor(Math.random() * (gradient.length - 1 + 0)) + 0);
 
     var block = document.querySelectorAll( '.block' );
     for(var i = 0; i < block.length; i++ ) {
