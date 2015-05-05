@@ -51,6 +51,7 @@ var gradientCave = (function(){
     gradientActive = (Math.floor(Math.random() * (gradient.length - 1 + 0)) + 0);
 
     var block = document.querySelectorAll( '.block' );
+
     for(var i = 0; i < block.length; i++ ) {
         block[i].style.background = gradient[gradientActive].gradients[i]
     }

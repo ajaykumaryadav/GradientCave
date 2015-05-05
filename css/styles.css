@@ -26,14 +26,13 @@ body {
   opacity: 0;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
   margin-left: -25px;
-  margin-top: -25px;
   border-radius: 100%;
   background: #fff;
   position: fixed;
   cursor: pointer;
   height: 50px;
   width: 50px;
-  top: 50%;
+  top: 10px;
   left: 50%;
 }
 .reload.active {
@@ -53,7 +52,7 @@ body {
 }
 .container {
   width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 .gradientBlock:after,
 .gradientBlock:before {
@@ -73,4 +72,44 @@ body {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
 }
