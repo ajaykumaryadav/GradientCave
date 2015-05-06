@@ -1,5 +1,6 @@
 /**
  * GradientCave by Ajay & Rahul.
+ *  - GradientCave is the extention where you will get css for any gradient and make your website/app more interesting",
  *  - This is a chrome extension.
  */
 
