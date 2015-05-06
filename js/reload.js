@@ -4,7 +4,7 @@
  */
 
 var gradientCave = (function(){
-  
+
   'use strict';
 
   // Vars
@@ -50,7 +50,7 @@ var gradientCave = (function(){
 
     gradientActive = (Math.floor(Math.random() * (gradient.length - 1 + 0)) + 0);
 
-    var block = document.querySelectorAll( '.block' );
+    var block = document.querySelectorAll( '.gradient' );
 
     for(var i = 0; i < block.length; i++ ) {
         block[i].style.background = gradient[gradientActive].gradients[i]
@@ -68,7 +68,7 @@ var gradientCave = (function(){
 
     return target;
   }
-  
+
   // Show button.
   setTimeout(function() {
     reloadButton.classList.add('active');
