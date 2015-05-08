@@ -1,10 +1,11 @@
 /**
  * GradientCave by Ajay & Rahul.
+ *  - GradientCave is the extention where you will get css for any gradient and make your website/app more interesting",
  *  - This is a chrome extension.
  */
 
 var gradientCave = (function(){
-  
+
   'use strict';
 
   // Vars
@@ -12,28 +13,95 @@ var gradientCave = (function(){
   var reloadSvg     = document.querySelector( 'svg' );
   var reloadEnabled = true;
   var rotation      = 0;
-  var gradient = [
-    {
-      "gradients": [
-        "#B3CC57","#ECF081","#FFBE40","#EF746F","#AB3E5B"
-      ]
-    },
-    {
-      "gradients": [
-        "#F4D07D","#49E9DF","#B02FD9","#144C9B","#03505F"
-      ]
-    },
-    {
-      "gradients": [
-        "#344D75","#F9FBFD","#9DAAB3","#656667","#F2641D"
-      ]
-    },
-    {
-      "gradients": [
-        "#F3CA0C","#D6B20B","#9B820C","#0C9B84","#3281BA"
-      ]
-    }
-  ]
+
+  var gradient = {
+                  "gradients": [
+                      {
+                          "colorBlock":[
+                              {
+                                  "block":[
+                                      {
+                                         "point" : "0%",
+                                         "code": "#F4D07D"
+                                      },
+                                      {
+                                         "point" : "50%",
+                                         "code": "#49E9DF"
+                                      },
+                                      {
+                                         "point" : "100%",
+                                         "code": "#B02FD9"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "block":[
+                                      {
+                                         "point" : "0%",
+                                         "code": "#F4D07D"
+                                      },
+                                      {
+                                         "point" : "50%",
+                                         "code": "#49E9DF"
+                                      },
+                                      {
+                                         "point" : "100%",
+                                         "code": "#B02FD9"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "block":[
+                                      {
+                                         "point" : "0%",
+                                         "code": "#F4D07D"
+                                      },
+                                      {
+                                         "point" : "50%",
+                                         "code": "#49E9DF"
+                                      },
+                                      {
+                                         "point" : "100%",
+                                         "code": "#B02FD9"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "block":[
+                                      {
+                                         "point" : "0%",
+                                         "code": "#F4D07D"
+                                      },
+                                      {
+                                         "point" : "50%",
+                                         "code": "#49E9DF"
+                                      },
+                                      {
+                                         "point" : "100%",
+                                         "code": "#B02FD9"
+                                      }
+                                  ]
+                              },
+                              {
+                                  "block":[
+                                      {
+                                         "point" : "0%",
+                                         "code": "#F4D07D"
+                                      },
+                                      {
+                                         "point" : "50%",
+                                         "code": "#49E9DF"
+                                      },
+                                      {
+                                         "point" : "100%",
+                                         "code": "#B02FD9"
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
   var gradientActive = 0;
 
   // Events
@@ -48,12 +116,24 @@ var gradientCave = (function(){
     reloadSvg.style.MozTransform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
     reloadSvg.style.transform  = 'translateZ(0px) rotateZ( ' + rotation + 'deg )';
 
-    gradientActive = (Math.floor(Math.random() * (gradient.length - 1 + 0)) + 0);
-
-    var block = document.querySelectorAll( '.block' );
+    // gradient.gradients[0].colorBlock[0].block[0]
+    gradientActive = (Math.floor(Math.random() * (gradient.gradients[0].length - 1 + 0)) + 0);
+    if(gradientActive == NaN) {
+      gradientActive = 0;
+    }
+    var block = document.querySelectorAll( '.gradient' );
 
     for(var i = 0; i < block.length; i++ ) {
-        block[i].style.background = gradient[gradientActive].gradients[i]
+      for(var j = 0; j < gradient.gradients[0].colorBlock[i].block.length; j++ ) {
+        var gradientBlck = gradient.gradients[0].colorBlock[i]
+        // block[i].style.background = gradient.gradients[0].colorBlock[i].block[j].code;
+        block[i].style.background = gradient.gradients[0].colorBlock[i].block[0].code;
+        block[i].style.background = "-moz-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        block[i].style.background = "-webkit-gradient(linear, left top, right top, color-stop("+gradientBlck.block[0].point+","+gradientBlck.block[0].code+"), color-stop("+gradientBlck.block[1].point+","+gradientBlck.block[1].code+"), color-stop("+gradientBlck.block[2].point+","+gradientBlck.block[2].code+"))";
+        block[i].style.background = "-webkit-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        block[i].style.background = "-ms-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        block[i].style.background = "linear-gradient(to right,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+      }
     }
 
   }
@@ -68,7 +148,7 @@ var gradientCave = (function(){
 
     return target;
   }
-  
+
   // Show button.
   setTimeout(function() {
     reloadButton.classList.add('active');
