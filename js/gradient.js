@@ -6,15 +6,15 @@ var gradient = {
                                   "block":[
                                       {
                                          "point" : "0%",
-                                         "code": "#F4D07D"
+                                         "code": "#FFFFFF"
                                       },
                                       {
                                          "point" : "50%",
-                                         "code": "#49E9DF"
+                                         "code": "#E1E1E1"
                                       },
                                       {
                                          "point" : "100%",
-                                         "code": "#B02FD9"
+                                         "code": "#00A3EF"
                                       }
                                   ]
                               },
@@ -22,15 +22,15 @@ var gradient = {
                                   "block":[
                                       {
                                          "point" : "0%",
-                                         "code": "#F4D07D"
+                                         "code": "#FF7B24"
                                       },
                                       {
                                          "point" : "50%",
-                                         "code": "#49E9DF"
+                                         "code": "#FF7B20"
                                       },
                                       {
                                          "point" : "100%",
-                                         "code": "#B02FD9"
+                                         "code": "#D9EF16"
                                       }
                                   ]
                               },
@@ -38,15 +38,15 @@ var gradient = {
                                   "block":[
                                       {
                                          "point" : "0%",
-                                         "code": "#F4D07D"
+                                         "code": "#2EFF89"
                                       },
                                       {
                                          "point" : "50%",
-                                         "code": "#49E9DF"
+                                         "code": "#2EFF80"
                                       },
                                       {
                                          "point" : "100%",
-                                         "code": "#B02FD9"
+                                         "code": "#35EFB7"
                                       }
                                   ]
                               },
@@ -54,15 +54,15 @@ var gradient = {
                                   "block":[
                                       {
                                          "point" : "0%",
-                                         "code": "#F4D07D"
+                                         "code": "#D119FF"
                                       },
                                       {
                                          "point" : "50%",
-                                         "code": "#49E9DF"
+                                         "code": "#D229FF"
                                       },
                                       {
                                          "point" : "100%",
-                                         "code": "#B02FD9"
+                                         "code": "#9D21EF"
                                       }
                                   ]
                               },
@@ -70,15 +70,15 @@ var gradient = {
                                   "block":[
                                       {
                                          "point" : "0%",
-                                         "code": "#F4D07D"
+                                         "code": "#F4FF8C"
                                       },
                                       {
                                          "point" : "50%",
-                                         "code": "#49E9DF"
+                                         "code": "#F4FF8D"
                                       },
                                       {
                                          "point" : "100%",
-                                         "code": "#B02FD9"
+                                         "code": "#8FEFCF"
                                       }
                                   ]
                               }
