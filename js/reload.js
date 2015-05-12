@@ -39,11 +39,11 @@ var gradientCave = (function(){
       for(var j = 0; j < gradient.gradients[0].colorBlock[i].block.length; j++ ) {
         var gradientBlck = gradient.gradients[0].colorBlock[i]
         // block[i].style.background = gradient.gradients[0].colorBlock[i].block[j].code;
-        block[i].style.background = gradient.gradients[0].colorBlock[i].block[0].code;
-        block[i].style.background = "-moz-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
-        block[i].style.background = "-webkit-gradient(linear, left top, right top, color-stop("+gradientBlck.block[0].point+","+gradientBlck.block[0].code+"), color-stop("+gradientBlck.block[1].point+","+gradientBlck.block[1].code+"), color-stop("+gradientBlck.block[2].point+","+gradientBlck.block[2].code+"))";
-        block[i].style.background = "-webkit-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
-        block[i].style.background = "-ms-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        // block[i].style.background = gradient.gradients[0].colorBlock[i].block[0].code;
+        // block[i].style.background = "-moz-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        // block[i].style.background = "-webkit-gradient(linear, left top, right top, color-stop("+gradientBlck.block[0].point+","+gradientBlck.block[0].code+"), color-stop("+gradientBlck.block[1].point+","+gradientBlck.block[1].code+"), color-stop("+gradientBlck.block[2].point+","+gradientBlck.block[2].code+"))";
+        // block[i].style.background = "-webkit-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
+        // block[i].style.background = "-ms-linear-gradient(left,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
         block[i].style.background = "linear-gradient(to right,  "+gradientBlck.block[0].code+" "+gradientBlck.block[0].point+", "+gradientBlck.block[1].code+" "+gradientBlck.block[1].point+", "+gradientBlck.block[2].code+" "+gradientBlck.block[2].point+")";
       }
     }
